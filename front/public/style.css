@@ -1,0 +1,106 @@
+.back-video{
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+
+.video-div {
+    position: absolute;
+    right: 0; 
+    bottom: 0; 
+    width: auto; 
+    height: 100%; 
+    z-index: -1;
+}
+
+.title-words {
+    text-align: center;
+    padding-top: 14%;
+}
+
+.title-words h1 {
+    font-family: 'PT Serif';
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+
+}
+.title-words h3 {
+    font-family: 'PT Serif';
+    font-size: 85px;
+    color: #fff;
+    font-weight: 600;
+
+}
+.title-words p {
+    font-family: 'PT Serif';
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.title-words a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.search-bar {
+    display: flex;
+  
+  justify-content: center;
+  height: auto;
+  
+
+}
+
+  table {
+    border-collapse: separate;
+    border-spacing: 30px;
+    margin: 10px auto;
+    width: 80%;
+    height: 100%;
+    
+  }
+  tr{
+    width: 80%;
+    padding: 100px;
+  }
+  
+  .rounded-box {
+    
+    border-radius: 30px; /* add rounded edges */
+    background-color: lightblue;
+    width: 33.33%;
+    height: 30vh;
+    text-align: center;
+    
+    font-size: 24px;
+    font-weight: bold;
+    margin: 100px;
+
+  }
+  .rounded-box:hover{
+    background-color: purple;
+    color: black;
+  }
+
+#root{
+    height: 100vh;
+}
+
+#bob{
+  height: 100vh;
+}
