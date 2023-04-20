@@ -1,6 +1,7 @@
 # EWon-Warriors
 5CHackathon - Health Track Winner
-Team Name: EWonianas - 5CHackathon 
+
+Team Name: EWonianas
 
 During an emergency at Pomona College, an international student hesitated to call an ambulance due to uncertainty about their health insurance coverage. Many students at Pomona, including all international students, are enrolled in the Student Health Insurance Program (SHIP). However, accessing and understanding the specific coverage details can be challenging. Contributing factors include the complexity of insurance plans, the confusing format of data in the PDF documents, and limited guidance provided by the college. As a result, students may struggle to determine what is and isn't covered, particularly in high-stress emergency situations.
 
