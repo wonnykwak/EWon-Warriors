@@ -1,5 +1,5 @@
 # EWon-Warriors
-5CHackathon - Health Track Winner
+5CHackathon - Health & Equity Track Winner
 
 Team Name: EWonianas
 
