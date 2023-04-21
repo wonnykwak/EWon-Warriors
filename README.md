@@ -1,5 +1,5 @@
-# EWon-Warriors
-5CHackathon - Health & Equity Track Winner
+# InsureIQ
+5C Hackathon - Health & Equity Track Winner
 
 Team Name: EWonianas
 
