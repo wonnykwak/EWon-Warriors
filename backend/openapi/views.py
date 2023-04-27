@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
+
 api_key = os.getenv("OPENAI_KEY", None)
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
@@ -17,6 +18,8 @@ def extract_data(request):
     if api_key is not None and request.method == 'POST':
         openai.api_key = api_key
         data = json.loads(request.body)
+        print( api_key)
+        print( data)
       
     # Get the user_prompt from the request
     user_prompt = data.get('input')

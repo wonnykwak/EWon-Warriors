@@ -70,7 +70,7 @@ const MyForm = () => {
         <form className="search-bar" onSubmit={handleSubmit}>
             <div class="form-outline w-50" style={{textAlign:"center"}}>
                 <input type="text" id="input1" class="form-control" name="data" value={inputValue} onChange={e => setInputValue(e.target.value)} />
-                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+                <button class="btn btn-primary mt-3" type="submit">Search</button>
             </div>
         </form>
         </div>

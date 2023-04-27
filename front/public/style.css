@@ -5,6 +5,23 @@
     bottom: 0;
     z-index: -1; 
 }
+.front-div{
+  
+  background-image: url(images/womanreading.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  opacity: 35%;
+  overflow: hidden;
+  
+}
+.background-picture {
+  opacity: 40%;
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
 
 .video-div {
     position: absolute;
@@ -16,26 +33,29 @@
 }
 
 .title-words {
+  position: relative;
+    z-index: 10;
     text-align: center;
     padding-top: 14%;
 }
 
 .title-words h1 {
-    font-family: 'PT Serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: 160px;
-    color: #fff;
+    color: black;
     font-weight: 600;
+    z-index: 1000;
 
 }
 .title-words h3 {
-    font-family: 'PT Serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: 85px;
     color: #fff;
     font-weight: 600;
 
 }
 .title-words p {
-    font-family: 'PT Serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     color: #fff;
     font-weight: 600;
@@ -66,10 +86,12 @@
 
 }
 
-  table {
+table {
     border-collapse: separate;
-    border-spacing: 30px;
-    margin: 10px auto;
+    border-color: white;
+    border-spacing: 100px;
+    margin: auto;
+    margin-top: 2%;
     width: 80%;
     height: 100%;
     
@@ -80,21 +102,41 @@
   }
   
   .rounded-box {
-    
     border-radius: 30px; /* add rounded edges */
-    background-color: lightblue;
+    background-color: #EFEDF2;
     width: 33.33%;
     height: 30vh;
     text-align: center;
     
     font-size: 24px;
     font-weight: bold;
-    margin: 100px;
 
   }
-  .rounded-box:hover{
-    background-color: purple;
-    color: black;
+  
+  .medimg {
+    width: 80%;
+    border-radius: 30px;
+  }
+  .medimg:hover{
+    background-color: black;
+    opacity: 20%;
+    
+  }
+  .table-div{
+    background-color: #EFEDF2;
+    width: 90%; /* The size of the table elements  */
+    margin: auto;
+    border-radius: 30px;
+  }
+  
+  .table-words {
+    font-family:'Red Hat Display';
+    color: purple; 
+  }
+
+  .main-page-div {
+    background-color: #EFEDF2;
+    padding-top: 3%;
   }
 
 #root{

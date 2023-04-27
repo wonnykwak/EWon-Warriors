@@ -9,10 +9,11 @@ function FrontScreen() {
         <div className="front-div">
             <div>
             
-                <video autoPlay loop muted plays-inline style={{zIndex: "-1", objectFit: "contain", width: "100%", minHeight: "100%", position: "absolute", objectFit: "cover"}}> 
+                {/* <video autoPlay loop muted plays-inline style={{zIndex: "-1", objectFit: "contain", width: "100%", minHeight: "100%", position: "absolute", objectFit: "cover"}}> 
                 
-                    <source src="videos/video.mp4" type="video/mp4" /> 
-                </video>
+                    <source src="videos/flashvideo.mp4" type="video/mp4" /> 
+                </video> */}
+                {/* <img class="background-picture" src="images/womanreading.jpeg" /> */}
                 
             </div>
             <div className = "title-words">
