@@ -13,25 +13,40 @@ from rest_framework.decorators import api_view
 
 from main.main import process_user_prompt
 
-@api_view(["POST"])
+@csrf_exempt
 def extract_data(request):
     if api_key is not None and request.method == 'POST':
         openai.api_key = api_key
         data = json.loads(request.body)
-        print( api_key)
-        print( data)
-      
-    # Get the user_prompt from the request
-    user_prompt = data.get('input')
-
+        # print( api_key)
+        # print( data)
+        user_prompt = data.get('user_prompt')
+        print(user_prompt)
     # Call the existing code to process the user_prompt and extract the tables
     # (Replace call_ai() and the rest of the code with a function)
-    extracted_tables = process_user_prompt(user_prompt)
+
+        extracted_tables = process_user_prompt(user_prompt)
 
     # Convert the extracted tables to JSON and return it as a response
-    json_tables = [table.to_json(orient="records") for table in extracted_tables]
-    return JsonResponse({"tables": json_tables})
+        # json_tables = [table.to_json(orient="records") for table in extracted_tables]
+        # return JsonResponse({"tables": json_tables})
 
+        json_tables = [(table.to_json(orient="records")) for table in extracted_tables]
+        return JsonResponse({"tables": json_tables})
+
+        # response = openai.Completion.create(
+        #     engine = 'text-davinci-003',
+        #     prompt = prompt,
+        #     max_tokens = 256,
+        #     temperature = 0.5
+        # )
+        
+        # print(response)
+    else:
+        return JsonResponse({"error": "Invalid API key or request method"})
+      
+    # Get the user_prompt from the request
+    
 
 def home(request):
     return render(request, 'home.html')
@@ -42,6 +57,34 @@ def about(request):
 
 @csrf_exempt
 def my_api_endpoint(request):
+    # if api_key is not None and request.method == 'POST':
+    #     openai.api_key = api_key
+    #     data = json.loads(request.body)
+    #     print( api_key)
+    #     print( data)
+    #     # Get the user_prompt from the request
+    #     user_prompt = data.get('input')
+
+    #     # Call the existing code to process the user_prompt and extract the tables
+    #     # (Replace call_ai() and the rest of the code with a function)
+
+    #     extracted_tables = process_user_prompt(user_prompt)
+
+    #     # Convert the extracted tables to JSON and return it as a response
+    #     json_tables = [table.to_json(orient="records") for table in extracted_tables]
+    #     return JsonResponse({"tables": json_tables})
+
+    #     # response = openai.Completion.create(
+    #     #     engine = 'text-davinci-003',
+    #     #     prompt = data.get('input'),
+    #     #     max_tokens = 256,
+    #     #     temperature = 0.5
+    #     # }
+    #     #print(response)
+    # else:
+    #     return JsonResponse({"error": "Invalid API key or request method"})
+      
+    
     if api_key is not None and request.method == 'POST':
         openai.api_key = api_key
         data = json.loads(request.body)
@@ -56,7 +99,7 @@ def my_api_endpoint(request):
         )
         print(prompt)
         print(response)
-        # Do something with the input data
+    # Do something with the input data
         return JsonResponse({'success': True})
     else:
         return JsonResponse({'success': False, 'message': 'Invalid request method'})

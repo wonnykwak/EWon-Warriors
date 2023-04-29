@@ -3,7 +3,7 @@ import OpenApi from "./OpenApi";
 
 function SecondPage() {
     return (
-        <div class="main-page-div">
+        <div id="SecondPage" class="main-page-div">
             <h1 style={{fontFamily:'Red Hat Display', fontSize:"8vh", textAlign:"center", paddingTop:"3%", paddingBottom:"1%"}}> InsureIQ.io </h1> 
             <p style={{fontFamily:'Red Hat Display', textAlign:"center"}}> Ask me a question </p>
             <OpenApi />

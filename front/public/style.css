@@ -7,16 +7,29 @@
 }
 .front-div{
   
-  background-image: url(images/womanreading.jpeg);
+  background-image: url('images/green.jpeg');
+  
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100%;
-  opacity: 35%;
+  height: 100vh;
+  
   overflow: hidden;
+  z-index: -1;
+  /* position: static;
+  top: 0;
+  left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: relative;
+  z-index: -1; */
   
 }
 .background-picture {
+  z-index: -1;
   opacity: 40%;
   height: 80%;
   width: 80%;
@@ -42,22 +55,25 @@
 .title-words h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 160px;
-    color: black;
+    color: #007074;
     font-weight: 600;
     z-index: 1000;
 
 }
 .title-words h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
     font-size: 85px;
-    color: #fff;
+    color: #007074;
     font-weight: 600;
+    padding-bottom: 60px;
 
 }
 .title-words p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    
     font-size: 30px;
-    color: #fff;
+    color: #007074;
     font-weight: 600;
 
 }
@@ -65,12 +81,16 @@
 .title-words a {
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: #007074;
     font-size: 25px;
-    border: 2px solid #fff;
+    border: 2px solid #007074;
     padding: 14px 70px;
     border-radius: 50px;
     margin-top: 20px;
+}
+.title-words a:hover {
+  color: black;
+  border: 2px solid black;
 }
 
 .form-control {
@@ -103,7 +123,7 @@ table {
   
   .rounded-box {
     border-radius: 30px; /* add rounded edges */
-    background-color: #EFEDF2;
+    background-color: #DDEBDA;
     width: 33.33%;
     height: 30vh;
     text-align: center;
@@ -123,7 +143,7 @@ table {
     
   }
   .table-div{
-    background-color: #EFEDF2;
+    background-color: #DDEBDA;
     width: 90%; /* The size of the table elements  */
     margin: auto;
     border-radius: 30px;
@@ -135,7 +155,8 @@ table {
   }
 
   .main-page-div {
-    background-color: #EFEDF2;
+    background-color: #DDEBDA;
+    /* background-color: #EFEDF2; */
     padding-top: 3%;
   }
 

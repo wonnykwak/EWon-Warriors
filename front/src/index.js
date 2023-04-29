@@ -6,7 +6,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FrontScreen from './components/FrontScreen';
 import SecondPage from './components/SecondPage';
-import displayTables, { tableContainer } from './components/OpenApi';
 import { HashRouter, Route, Routes, Link } from "react-router-dom";
 
 
@@ -23,12 +22,7 @@ second.render(
   <SecondPage />
   </React.StrictMode>
 )
-const third = ReactDOM.createRoot(document.getElementById('steve'));
-third.render(
-  <React.StrictMode>
-  <displayTables />
-  </React.StrictMode>
-)
+
 
 
 // const bob = ReactDOM.createRoot(document.getElementById('bob'));

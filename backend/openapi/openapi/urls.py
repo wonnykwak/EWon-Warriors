@@ -16,11 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from views import chatbot
-from views import my_api_endpoint
-from views import home
-from views import about
-from views import extract_data
+from views import chatbot, my_api_endpoint, home, about, extract_data
 
 urlpatterns = [
     path("extract_data/", extract_data, name="extract_data"),

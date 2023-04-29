@@ -1,38 +1,34 @@
 import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { Link } from 'react-router-dom';
 import SecondPage from "./SecondPage";
 
 function FrontScreen() {
+
+            AOS.init();
+
     return (
         <div className="front-div">
-            <div>
-            
-                {/* <video autoPlay loop muted plays-inline style={{zIndex: "-1", objectFit: "contain", width: "100%", minHeight: "100%", position: "absolute", objectFit: "cover"}}> 
+            {/* <div>
+                <img className="background-picture" src = "images/green.jpeg" />
                 
-                    <source src="videos/flashvideo.mp4" type="video/mp4" /> 
-                </video> */}
-                {/* <img class="background-picture" src="images/womanreading.jpeg" /> */}
-                
-            </div>
+            </div> */}
             <div className = "title-words">
-                <h1> Insurance </h1> 
-                <h3> Simplified. </h3>
-                <p> No More Confusing SHIP</p>
-                {/* <HashLink to="#SecondPage">
-                    
-                    <h1> Hello </h1>
-                {/* </HashLink> */}
-                {/* <Link to="../public/second.html">
-                    <button>Go to Other File</button>
-                </Link> */} 
+                <h1 data-aos="slide-right" data-aos-delay="4000"> Insurance </h1> 
+                <h3 data-aos="slide-left"> Simplified. </h3>
+                
+                
                 <HashLink to={"#SecondPage"}>
-                Hello
+                    Explore
                 </HashLink>
                 
                 
             </div>
+            
             
         
     </div>

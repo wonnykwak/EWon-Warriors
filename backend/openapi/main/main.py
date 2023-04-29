@@ -1,5 +1,8 @@
 import openai
 import pandas as pd
+import openai, os
+
+api_key = os.getenv("OPENAI_KEY", None)
 
 def process_user_prompt(user_prompt):
     # Read the CSV file and store it in a DataFrame
@@ -28,14 +31,14 @@ def extract_tables_from_data(data, raw_data, user_prompt):
 
     def call_ai():
         # Create a new prompt for the OpenAI API
+        print(user_prompt)
         new_prompt = f"{user_prompt} Choose the top 3 most relevant categories according to the question of the following string array of categories: {category_str}. Do not give me more than three answers. Do not generate any categories. Return them in the same format as the input."
-
         # Call the OpenAI API
-        openai.api_key = "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"
+
         response = openai.Completion.create(
             engine="text-davinci-002",
             prompt=new_prompt,
-            max_tokens=150,
+            max_tokens = 200,
             n=1,
             stop=None,
             temperature=0.7,
@@ -106,6 +109,7 @@ def extract_tables_from_data(data, raw_data, user_prompt):
         new_dict[category] = (first_index, last_index)
         extracted_table = raw_data.iloc[first_index:last_index]
         extracted_tables.append(extracted_table)
+        
         
     return extracted_tables
 
